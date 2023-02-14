@@ -1,2 +1,3 @@
-0 : Alias
-1:
+0 create alias
+1 hello you
+
