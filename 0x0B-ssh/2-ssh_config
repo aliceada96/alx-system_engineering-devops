@@ -1,5 +1,5 @@
 # Configuration file for my local ssh client
 # Allows connection to server without a password
-Host 100.26.227.25
+Host 100.25.161.102
 	IdentifyFile ~/.ssh/school
 	PasswordAuthentication no
