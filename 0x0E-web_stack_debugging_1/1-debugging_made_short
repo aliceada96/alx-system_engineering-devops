@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # shorten code used previously
-
 sudo apt update
 sudo apt install nginx -y
 sudo echo "ENABLED=1" | sudo tee -a /etc/default/nginx
