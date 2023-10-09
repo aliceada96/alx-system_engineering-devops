@@ -4,7 +4,11 @@
 sudo apt-get update
 sudo apt-get install -y haproxy=2.0.\*
 
-sudo echo 'ENABLED=1' | sudo tee /etc/default/haproxy
+if ! grep -q "ENABLED=" /etc/default/haproxy; then
+    sudo echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
+else
+    sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy # make ENABLED=1
+fi
 
 # Configure HAProxy by appending a frontend and backend configuration to /etc/haproxy/haproxy.cfg
 sudo sed -i "$ a\
