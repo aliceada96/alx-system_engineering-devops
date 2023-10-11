@@ -24,6 +24,12 @@ subdomain_checker() {
   done
 }
 
+# Check if both domain and subdomain parameters are provided
+if [ $# -lt 1 ]; then
+  echo "Usage: $0 <domain> [<subdomain>]"
+  exit 1
+fi
+
 # Extract domain and subdomain from parameters
 domain="$1"
 subdomain="$2"
