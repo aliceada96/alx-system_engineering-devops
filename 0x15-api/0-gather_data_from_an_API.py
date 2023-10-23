@@ -13,8 +13,9 @@ if __name__ == "__main__":
         f"https://jsonplaceholder.typicode.com/users/{argv[1]}/todos")
 
     completed = [i for i in to_dos.json() if i['completed'] is True]
+    comp = len(completed)
+    total = len(to_dos.json())
 
-    print(f"Employee {users} is done
-          with tasks({len(completed)}/{len(to_dos.json())}): ")
+    print(f"Employee {users} is done with tasks({comp}/{total}): ")
     for i in completed:
         print(f"\t{i['title']}")
