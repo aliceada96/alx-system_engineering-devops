@@ -16,6 +16,6 @@ if __name__ == "__main__":
     comp = len(completed)
     total = len(to_dos.json())
 
-    print(f"Employee {users} is done with tasks({comp}/{total}): ")
+    print(f"Employee {users} is done with tasks({comp}/{total}):")
     for i in completed:
-        print(f"\t{i['title']}")
+        print(f"\t {i['title']}")
