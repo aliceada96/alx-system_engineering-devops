@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """This script gathers data from an api"""
 
-from sys import argv
 import requests
+from sys import argv
 
 if __name__ == "__main__":
 
