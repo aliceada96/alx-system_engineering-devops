@@ -7,7 +7,7 @@ import re
 import requests
 
 
-def recurse(subreddit, hot_list, after=None):
+def recurse(subreddit, hot_list=[], after=None):
     """Recursively find hot articles in a subreddit."""
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {"User-Agent": "MyUserAgent"}
